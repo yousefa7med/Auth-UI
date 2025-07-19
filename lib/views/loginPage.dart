@@ -3,7 +3,6 @@ import 'package:auth_ui/Widgets/costum_text_field.dart';
 import 'package:auth_ui/views/RegisterPage.dart';
 import 'package:flutter/material.dart';
 
-
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -31,7 +30,7 @@ class LoginPage extends StatelessWidget {
 
               CostumTextField(prefixIcon: Icons.password, hintText: 'Password'),
 
-              Bottom(text: "Login"),
+              Bottom(text: "Login", color: Color(0xff9C28B2)),
               Spacer(),
 
               Text(
@@ -49,7 +48,13 @@ class LoginPage extends StatelessWidget {
                   Text("Don't Have An Account ? "),
 
                   GestureDetector(
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterPage())),
+                    onTap:
+                        () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegisterPage(),
+                          ),
+                        ),
                     child: Text(
                       "Sign Up",
                       style: TextStyle(

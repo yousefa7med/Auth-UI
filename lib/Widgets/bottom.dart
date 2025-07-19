@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Bottom extends StatelessWidget {
-  const Bottom({super.key, required this.text});
+  const Bottom({super.key, required this.text, this.border,  this.color, this.textColor});
   final String text;
+  final BoxBorder? border;
+  final Color? color;
+  final Color? textColor;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,8 +15,9 @@ class Bottom extends StatelessWidget {
         child: Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color(0xff9C28B2),
+            color:color??Colors.white ,
             borderRadius: BorderRadius.circular(45),
+            border: border
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 20.0),
@@ -21,7 +25,7 @@ class Bottom extends StatelessWidget {
               child: Text(
                 text,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: textColor?? Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),

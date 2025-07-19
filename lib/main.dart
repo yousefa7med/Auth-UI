@@ -1,4 +1,4 @@
-import 'package:auth_ui/loginPage.dart';
+import 'package:auth_ui/views/loginPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -10,8 +10,9 @@ class CostumTextField extends StatelessWidget {
   final IconData prefixIcon;
   @override
   Widget build(BuildContext context) {
-    return 
-TextField(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: TextField(
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
@@ -26,7 +27,7 @@ TextField(
           fillColor: Color(0xffEFE4F3),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
         ),
-      )
-    ;
+      ),
+    );
   }
 }
